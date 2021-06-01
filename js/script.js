@@ -118,21 +118,17 @@
 // Step 3: comunicare all'utente se può partecipare o no alla festa.
 
 
-// var array = ['Jay', 'Daisy', 'Nick', 'Tom', 'Mirtle', 'Jordan', 'Meyer']
+var array = ['Jay', 'Daisy', 'Nick', 'Tom', 'Mirtle', 'Jordan', 'Meyer'];
 
-// var invitato = prompt('Il suo nome, prego')
-// invitato = invitato.charAt(0).toUpperCase() + invitato.slice(1).toLowerCase();
-// // console.log(invitato)
+var invitato = prompt('Il suo nome, prego');
+invitato = invitato.charAt(0).toUpperCase() + invitato.slice(1).toLowerCase();
+// console.log(invitato)
 
-// var comunicazione = 'L\'invitato' + invitato + 'è presente nella lista, si accomodi'
+var comunicazione = 'L\'invitato' + ' ' + invitato + ' ' + 'non è presente nella lista';
 
-// for(var i = 0; i < array.length; i++){
-//     if (invitato != array[i]){
-//         comunicazione = 'L\'invitato non è presente nella lista, si accomodi fuori'
-//     } 
-// }
-
-// document.getElementById('invito').innerHTML = comunicazione;
-
-
-// rivedere
+for(var i = 0; i < array.length; i++){
+    if (invitato == array[i]){
+        comunicazione = 'L\'invitato' + ' ' + invitato + ' ' + 'è presente nella lista';
+    }
+}
+document.getElementById('invito').innerHTML = comunicazione;
